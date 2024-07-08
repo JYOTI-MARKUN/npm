@@ -1,0 +1,36 @@
+fetch data using axios, we can get data from axios by linkng it with our HTML but this is not consideres as best practice as we have to depend on exterfile code 
+
+npm is node package manager that store other developer piece of code and we can use it using npm in our code
+
+node js : in node js we can execute every js code but here window function is not present, as node js is not connected to any browser it's an application 
+window alternative in node js is global
+
+to make a simple project a npm project we have to initialise it like a git repo , it will create a package.json file where all package that we have install is present 
+to install any external librabry in npm use npm i libraryName / npm install libraryName, it will create a node_modules folder where librabry is present which we have download this library contains it's own package.json file, where its dependencies is listed and all these dependencies also download with axios
+
+to use an external librabry in script file use import statement and also use type: module in package.json file 
+
+any terminal can become node terminal using node in it and to come out from node terminal we need to press ctrl + c 2 times
+
+in browser we can not use import statement from externalfile so we need to use a bundler 
+a bundler is something that store all import and export file and store data for use
+for node bundler we have  parcel
+to install parcel as devdepencies 
+npm i parcel -D
+
+to run a parcel's terminal use
+npx parcel index.html here index.html is the name of main file  we do this as our browser will not work for export and import so we need to create other virtual sever 
+
+in this parcel sever our original js file is replace by it's own js file that auto import nuccessary files from axios and it also contains our js file code 
+
+we share only main file in git repo rest file is set to gitigore file , main file include package.json and package-lock.json
+
+when we download a git repo all dependencies is store in package.json or package-lock.json, so we need to install only npm i
+
+difference between package.json and package-lock.json, package-lock.json contains the exact version of parcel while package.json can vary 
+
+there are three symbol ^ 8.2.10 means 2 minor change and 3rd can change 
+~ means only 3rd value change
+* means 1st value of th eversion change
+
+a package.json file will download package as per version any version depend upon the sign
